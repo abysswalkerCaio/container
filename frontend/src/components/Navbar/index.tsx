@@ -7,6 +7,13 @@ function Navbar() {
             <nav className="container">
                 <div className="dsmovie-nav-content">
                     <h1>Manipulação de Containers</h1>
+                    <a href="/container" rel="noreferrer">
+                        <h3>Cadastrar</h3>
+                    </a>
+                    <a href="/move" rel="noreferrer">
+                        <h3>Movimentar</h3>
+                    </a>
+                    <h3>Gerar Relatório</h3>
                     <a href="https://github.com/abysswalkerCaio" target="_blank" rel="noreferrer">
                         <div className="dsmovie-contact-container">
                             <GithubIcon />

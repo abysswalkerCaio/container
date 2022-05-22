@@ -1,6 +1,36 @@
+import { Link } from "react-router-dom";
+
 function Move() {
     return (
-        <h1>Página de Movimentação</h1>
+        <div className="container-form-container">
+            <div className="container-card-bottom-container">
+                <h3>Movimentar Container</h3>
+                <form className="container-form">
+                    <div className="form-group container-form-group">
+                        <label htmlFor="nameClient">ID do Container:</label>
+                        <input type="text" className="form-control" id="idContainer" />
+                    </div>
+                    <div className="form-group container-form-group">
+                        <label htmlFor="type">Tipo de Movimentação:</label>
+                        <select className="form-control" id="type">
+                            <option>Embarque</option>
+                            <option>Descarga</option>
+                            <option>Gate In</option>
+                            <option>Gate Out</option>
+                            <option>Reposicionamento</option>
+                            <option>Pesagem</option>
+                            <option>Scanner</option>
+                        </select>
+                    </div>
+                    <div className="container-form-btn-container">
+                        <button type="submit" className="btn btn-primary container-btn">Movimentarr</button>
+                    </div>
+                </form >
+                <Link to="/">
+                    <button className="btn btn-primary container-btn mt-3">Cancelar</button>
+                </Link>
+            </div >
+        </div >
     );
 }
 
