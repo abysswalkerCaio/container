@@ -13,7 +13,9 @@ function Navbar() {
                     <a href="/move" rel="noreferrer">
                         <h3>Movimentar</h3>
                     </a>
-                    <h3>Gerar Relatório</h3>
+                    <a href="/report" rel="noreferrer">
+                        <h3>Relatórios</h3>
+                    </a>
                     <a href="https://github.com/abysswalkerCaio" target="_blank" rel="noreferrer">
                         <div className="dsmovie-contact-container">
                             <GithubIcon />

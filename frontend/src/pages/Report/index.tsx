@@ -1,29 +1,21 @@
 import { Link } from "react-router-dom";
 
-function Move() {
+function Report() {
     return (
         <div className="container-form-container">
             <div className="container-card-bottom-container">
-                <h3>Movimentar Container</h3>
+                <h3>Gerar Relatório</h3>
                 <form className="container-form">
                     <div className="form-group container-form-group">
                         <label htmlFor="idContainer">ID do Container:</label>
                         <input type="text" className="form-control" id="id" />
                     </div>
                     <div className="form-group container-form-group">
-                        <label htmlFor="movimentation">Tipo de Movimentação:</label>
-                        <select className="form-control" id="movimentation">
-                            <option>Embarque</option>
-                            <option>Descarga</option>
-                            <option>Gate In</option>
-                            <option>Gate Out</option>
-                            <option>Reposicionamento</option>
-                            <option>Pesagem</option>
-                            <option>Scanner</option>
-                        </select>
+                        <label htmlFor="idContainer">ID da Movimentação:</label>
+                        <input type="text" className="form-control" id="id" />
                     </div>
                     <div className="container-form-btn-container">
-                        <button type="submit" className="btn btn-primary container-btn">Movimentar</button>
+                        <button type="submit" className="btn btn-primary container-btn">Gerar</button>
                     </div>
                 </form >
                 <Link to="/">
@@ -34,4 +26,4 @@ function Move() {
     );
 }
 
-export default Move;
+export default Report;
