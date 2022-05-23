@@ -7,12 +7,12 @@ function Move() {
                 <h3>Movimentar Container</h3>
                 <form className="container-form">
                     <div className="form-group container-form-group">
-                        <label htmlFor="nameClient">ID do Container:</label>
+                        <label htmlFor="idContainer">ID do Container:</label>
                         <input type="text" className="form-control" id="idContainer" />
                     </div>
                     <div className="form-group container-form-group">
-                        <label htmlFor="type">Tipo de Movimentação:</label>
-                        <select className="form-control" id="type">
+                        <label htmlFor="movimentation">Tipo de Movimentação:</label>
+                        <select className="form-control" id="movimentation">
                             <option>Embarque</option>
                             <option>Descarga</option>
                             <option>Gate In</option>
@@ -23,7 +23,7 @@ function Move() {
                         </select>
                     </div>
                     <div className="container-form-btn-container">
-                        <button type="submit" className="btn btn-primary container-btn">Movimentarr</button>
+                        <button type="submit" className="btn btn-primary container-btn">Movimentar</button>
                     </div>
                 </form >
                 <Link to="/">
