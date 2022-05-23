@@ -33,9 +33,10 @@ public class Report implements Serializable {
 		
 	}
 
-	public Report(Long id) {
-		super();
+	public Report(Long id, Container container, Move move) {
 		this.id = id;
+		this.container = container;
+		this.move = move;
 	}
 
 	public Long getId() {
