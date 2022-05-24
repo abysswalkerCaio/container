@@ -22,4 +22,11 @@ public class ContainerService {
 		Page<ContainerDTO> page = result.map(x -> new ContainerDTO(x));
 		return page;
 	}
+	
+	@Transactional(readOnly = true)
+	public ContainerDTO findById(Long id) {
+		Container result = repository.findById(id).get();
+		ContainerDTO dto = new ContainerDTO(result);
+		return dto;
+	}
 }

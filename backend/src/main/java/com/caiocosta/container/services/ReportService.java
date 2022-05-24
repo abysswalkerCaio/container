@@ -22,4 +22,11 @@ public class ReportService {
 		Page<ReportDTO> page = result.map(x -> new ReportDTO(x));
 		return page;
 	}
+	
+	@Transactional(readOnly = true)
+	public ReportDTO findById(Long id) {
+		Report result = repository.findById(id).get();
+		ReportDTO dto = new ReportDTO(result);
+		return dto;
+	}
 }

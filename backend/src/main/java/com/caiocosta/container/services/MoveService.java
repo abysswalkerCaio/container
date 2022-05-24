@@ -22,4 +22,11 @@ public class MoveService {
 		Page<MoveDTO> page = result.map(x -> new MoveDTO(x));
 		return page;
 	}
+	
+	@Transactional(readOnly = true)
+	public MoveDTO findById(Long id) {
+		Move result = repository.findById(id).get();
+		MoveDTO dto = new MoveDTO(result);
+		return dto;
+	}
 }
