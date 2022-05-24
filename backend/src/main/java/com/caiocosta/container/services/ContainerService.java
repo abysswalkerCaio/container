@@ -29,4 +29,18 @@ public class ContainerService {
 		ContainerDTO dto = new ContainerDTO(result);
 		return dto;
 	}
+	
+	@Transactional
+	public ContainerDTO saveContainer(ContainerDTO dto) {
+		Container container = new Container();
+		container.setNameClient(dto.getNameClient());
+		container.setNameContainer(dto.getNameContainer());
+		container.setType(dto.getType());
+		container.setStatus(dto.getStatus());
+		container.setCategory(dto.getCategory());
+		
+		container = repository.saveAndFlush(container);
+		
+		return new ContainerDTO(container);
+	}
 }

@@ -7,7 +7,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.caiocosta.container.dto.ReportDTO;
+import com.caiocosta.container.entities.Container;
+import com.caiocosta.container.entities.Move;
 import com.caiocosta.container.entities.Report;
+import com.caiocosta.container.repositories.ContainerRepository;
+import com.caiocosta.container.repositories.MoveRepository;
 import com.caiocosta.container.repositories.ReportRepository;
 
 @Service
@@ -15,6 +19,8 @@ public class ReportService {
 	
 	@Autowired
 	private ReportRepository repository;
+	private ContainerRepository containerRepository;
+	private MoveRepository moveRepository;
 	
 	@Transactional(readOnly = true)
 	public Page<ReportDTO> findAll(Pageable pageable) {
@@ -28,5 +34,18 @@ public class ReportService {
 		Report result = repository.findById(id).get();
 		ReportDTO dto = new ReportDTO(result);
 		return dto;
+	}
+	
+	@Transactional
+	public ReportDTO saveReport(ReportDTO dto) {
+		Report reportReturn = new Report();
+		Container container = containerRepository.findById(dto.getContainer().getNameContainer());
+		Move move = moveRepository.findById(dto.getMove().getStartDate());
+		if (!(container == null) && !(move == null)) {
+			Report report = new Report();
+			report = repository.saveAndFlush(report);
+			reportReturn = report;
+		}
+		return new ReportDTO(reportReturn);
 	}
 }

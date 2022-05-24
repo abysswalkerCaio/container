@@ -34,7 +34,6 @@ public class Move {
 
 	public Move(Long id, Container container, String movimentation, String startDate, String finalDate,
 			String startHour, String finalHour) {
-		super();
 		this.id = id;
 		this.container = container;
 		this.movimentation = movimentation;

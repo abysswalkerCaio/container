@@ -22,6 +22,22 @@ function Move() {
                             <option>Scanner</option>
                         </select>
                     </div>
+                    <div className="form-group container-form-group">
+                        <label htmlFor="idContainer">Data de Início:</label>
+                        <input type="date" className="form-control" id="startDate" />
+                    </div>
+                    <div className="form-group container-form-group">
+                        <label htmlFor="idContainer">Data de Fim:</label>
+                        <input type="date" className="form-control" id="finalDate" />
+                    </div>
+                    <div className="form-group container-form-group">
+                        <label htmlFor="idContainer">Hora de Início:</label>
+                        <input type="date" className="form-control" id="startHour" />
+                    </div>
+                    <div className="form-group container-form-group">
+                        <label htmlFor="idContainer">Hora de Fim:</label>
+                        <input type="date" className="form-control" id="finalHour" />
+                    </div>
                     <div className="container-form-btn-container">
                         <button type="submit" className="btn btn-primary container-btn">Movimentar</button>
                     </div>
